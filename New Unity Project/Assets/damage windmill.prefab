@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2440975694514759201}
   - component: {fileID: 2440975694514759200}
   - component: {fileID: 2440975694514759203}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 2440975694782883954}
   - component: {fileID: 2440975694782883965}
   - component: {fileID: 2440975694782883964}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 2440975695027439226}
   - component: {fileID: 2440975695027439205}
   - component: {fileID: 2440975695027439204}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 2440975695384310909}
   - component: {fileID: 2440975695384310908}
   - component: {fileID: 2440975695384310911}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3078,7 +3078,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2440975695917461892}
-  m_Layer: 0
+  - component: {fileID: -2750777495394004428}
+  m_Layer: 10
   m_Name: damage windmill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3103,3 +3104,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &-2750777495394004428
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2440975695917461895}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

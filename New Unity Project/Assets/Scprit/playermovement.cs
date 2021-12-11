@@ -10,7 +10,9 @@ public class playermovement : MonoBehaviour
   
     public float speed = 12f;
     public float turnsmoothTime = 0.2f;
+    public float Gravity = 9.81f; 
     float turnSmoothVelocity;
+    Vector3 velocity;
     // Update is called once per frame
     void Update()
     {
@@ -24,5 +26,7 @@ public class playermovement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, tragetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir * speed * Time.deltaTime);
         }
+        velocity.y += Gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 }

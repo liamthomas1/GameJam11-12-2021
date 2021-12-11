@@ -5,24 +5,20 @@ using UnityEngine.AI;
 using UnityEngine.Accessibility;
 public class enemy : MonoBehaviour
 {
-    public NavMeshAgent agents;
-    public Transform player;
-    public LayerMask whatisground, whatisplayer;
-    //patroling
-    public Vector3 walkpoint;
-    bool walkpointset;
-    public float walkpointrange;
-
-    //attacking
-    public float TimeBetweenAttacks;
-    bool alreadyAttacks;
-    //states
-    public float sightrange, attackrange;
-    public bool playerinsightrange, playerinattackedrange;
-    private void Awake()
+    public GameObject Enemy;
+    private void Start()
     {
-        player = GameObject.Find("playerobj").transform;
-        agents = GetComponent<NavMeshAgent>();
+        for (int i = 0; i < 5; i++)
+        {
+            Instantiate(Enemy);
+        }
+        void OnCollisionEnter(Collision otherOBJ)
+        {
+            if (otherOBJ.gameObject.tag == "player")
+            {
+                Destroy(gameObject, .5f);
+            } 
+        }
     }
 
 }
